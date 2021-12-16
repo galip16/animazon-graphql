@@ -19,7 +19,7 @@ export default function Nav() {
                     </select>
                     <input />
                     <button className="nav-btn">
-                        <img src={search}/>
+                        <img src={search} />
                     </button>
                 </div>
                 <div className="nav-delivery-info-container">
@@ -31,7 +31,7 @@ export default function Nav() {
                     <h2>& Orders</h2>
                 </div>
                 <div className="nav-cart-container">
-                    <img src={cart}/>
+                    <img src={cart} />
                     <h2>cart</h2>
                 </div>
             </div>
