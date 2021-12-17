@@ -1,6 +1,6 @@
 # animazon-graphql
 
-- Diese App wurde für das Lernen von graphql erstellt.
+- Diese App wurde für das Lernen von __GraphQL__ erstellt.
 - Daher wurde mehr Wert auf Backend gelegt.
 
 ### Wie führe ich die Codes aus?  // Installation
