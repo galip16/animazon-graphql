@@ -3,38 +3,42 @@ import AnimalForm from './AnimalForm'
 
 function AddAnimalButton({ addAnimal }) {
 
-    const [variables, setVariables] = useState({
-        variables: {
-            slug: "ostrich",
-            image: "ostrich",
-            title: "This a very good animal",
-            price: "33.5",
+    const [variables, setVariables] = useState(
+        {
+            slug: "",
+            image: "",
+            title: "",
+            price: "",
             description: ["that", "is", "perfekt"],
-            stock: 12,
-            category: "1",
-            rating: 5.0
-        }
-    })
+            stock: "",
+            category: "",
+            rating: ""
+
+
+        })
     return (
         <div>
             {/* Button trigger modal  */}
-            <button type="button" data-target="#exampleModalCenter" data-toggle="modal" class="btn btn-primary btn-lg btn-block" >Add an Animal</button>
+            <button type="button" data-target="#exampleModalCenter" data-toggle="modal" className="btn btn-primary btn-lg btn-block" >Add an Animal</button>
 
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">New Animal Information</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLongTitle">New Animal Information</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <AnimalForm variables={variables} setVariables={setVariables} />
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onClick={() => addAnimal(variables)} >Add the Animal</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary" onClick={() => {
+                                console.log(variables);
+                                addAnimal({ variables: variables })
+                            }} >Add the Animal</button>
                         </div>
                     </div>
                 </div>
